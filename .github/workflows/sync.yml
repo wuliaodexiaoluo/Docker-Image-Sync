@@ -1,0 +1,22 @@
+name: auto-sync
+on:
+  schedule:
+    - cron: "0 16 * * *"
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+       - uses: actions/checkout@v3
+       - name: Setup
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.9
+        
+       - name: Read Task
+        run: |
+          git clone git@github.com:/wuliaodexiaoluo/auto-sync-fork
+          python do.py
+          
+        
+       
+       
