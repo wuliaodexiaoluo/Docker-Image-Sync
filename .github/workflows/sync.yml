@@ -16,4 +16,4 @@ jobs:
       - name: Read Task  
         run: |   
           git clone git@github.com:/wuliaodexiaoluo/Auto-Sync-Fork.git
-          python Sync.py --api-key=${secrets.Action_API_Key}
+          python Sync.py --api-key=xxxxxx --user=wlx --email=wlx@qq.com
