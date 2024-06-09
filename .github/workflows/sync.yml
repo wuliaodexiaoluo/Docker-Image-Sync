@@ -1,7 +1,8 @@
 name: auto-sync  
 on:  
-  schedule:  
-    - cron: "0 16 * * *"  # 于北京时间 0 点自动执行
+  #schedule:  
+  #  - cron: "0 16 * * *"  # 于北京时间 0 点自动执行
+  workflow_dispatch:
 jobs:  
   build:  
     runs-on: windows-latest  
