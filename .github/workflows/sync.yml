@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 jobs:  
   build:  
-    runs-on: windows-latest  
+    runs-on: ubuntu-latest  
     steps:  
       - uses: actions/checkout@v3  
         
@@ -16,6 +16,8 @@ jobs:
             
       - name: Read Task  
         run: |   
-          git clone git@github.com:/wuliaodexiaoluo/Auto-Sync-Fork.git
-          python -m pip install requests loguru
-          python Sync.py --api-key=xxxxxx --user=wlx --email=wlx@qq.com
+          #git clone git@github.com:/wuliaodexiaoluo/Auto-Sync-Fork.git
+          #python -m pip install requests loguru
+          #python Sync.py --api-key=xxxxxx --user=wlx --email=wlx@qq.com
+          apt -y install wget
+          wget https://us.softpedia-secure-download.com/dl/b83f964293144c869339092eb5bdeb42/66685ce0/800000041/apk/Android%20System%20WebView-122.0.6261.119.apk
